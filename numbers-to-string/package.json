@@ -11,5 +11,9 @@
     "url": "numbers-to-string"
   },
   "author": "Sergey Averyanov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
 }
