@@ -1,5 +1,21 @@
-var n2s = require('numbers-to-string');
+/**
+ * n2s() преобразует массив целых чисел в строку.
+ * Может быть запущена как синхронно, так и асинхронно. 
+ * Для асинхронного запуска требуется передать функцию callback вторым аргументом.
+ */
 
-var numbers = [1, 2, 3, 5, 6, 1000];
-var str = n2s.n2s(numbers);
+var n2s = require('numbers-to-string'); // подгружаем модуль n2s
+
+var numbers = [1, 2, 3, 5, 6, 1000];	// массив чисел для преобразования
+
+// синхронный запуск
+var str = n2s.n2s(numbers);				
+console.log('Sync.');
 console.log(str);
+
+// асинхронный запуск
+var callback = function(str) {			// функция, которая будет запущена после асинхронного выполнения преобразования массива в строку
+	console.log('Async.');
+	console.log(str);
+}
+n2s.n2s(numbers, callback);
