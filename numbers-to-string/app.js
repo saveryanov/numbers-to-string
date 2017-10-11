@@ -50,7 +50,6 @@ module.exports.n2s = function(numbers, is_bin_search, callback) {
 		var transform = function() {
 			var output = "";
 			if(Array.isArray(numbers)) {	// если numbers массив
-				output += numbers[0]; // фиксируем первый элемент
 				var last_elem_i = numbers.length - 1;
 				
 				var interval_start = 0;
@@ -65,6 +64,10 @@ module.exports.n2s = function(numbers, is_bin_search, callback) {
 					if((last_i - first_i) == (numbers[last_i] - numbers[first_i])) {	// если разница в индексах равна разнице в значениях, то это интервал
 						if((last_i) == last_elem_i || (numbers[last_i + 1] - numbers[last_i]) > 1) {	// если следующий элемент больше текущего больше чем на 1, то конец
 							interval_end = last_i;
+							if(interval_start != 0) {	// если не первый элемент, то между интервалами рисуем запятую
+								output += ",";
+							}
+							output += numbers[interval_start];
 							if(interval_end - interval_start > 1) {
 								output += "-";
 							} else {
@@ -73,12 +76,11 @@ module.exports.n2s = function(numbers, is_bin_search, callback) {
 							if(last_i != first_i) {
 								output += numbers[last_i];
 							}
-							interval_start = interval_end;
+							interval_start = interval_end + 1;
 							first_i = last_i + 1;
-							last_i = last_i + 1 + Math.ceil((last_elem_i - last_i)/2);	// делаем шаг на половину вправо
+							last_i += 1 + Math.ceil((last_elem_i - last_i)/2);	// делаем шаг на половину вправо
 						} else {
-							first_i = last_i;
-							last_i = last_i + Math.ceil((last_elem_i - last_i)/2);	// делаем шаг на половину вправо							
+							last_i += Math.ceil((last_elem_i - last_i)/2);	// делаем шаг на половину вправо							
 						}
 					} else {
 						last_i -= Math.ceil((last_elem_i - last_i)/2);	// делаем шаг на половину влево
