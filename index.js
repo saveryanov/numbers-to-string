@@ -6,16 +6,17 @@
 
 var n2s = require('numbers-to-string'); // подгружаем модуль n2s
 
-var numbers = [1, 2, 3, 5, 6, 1000];	// массив чисел для преобразования
+var numbers = [1, 2, 3];	// массив чисел для преобразования
+
+// асинхронный запуск
+// функция, которая будет запущена после асинхронного выполнения
+var callback = function(str) {
+	console.log('Async.');
+	console.log(str);
+}
+n2s.n2s(numbers, callback);
 
 // синхронный запуск
 var str = n2s.n2s(numbers);				
 console.log('Sync.');
 console.log(str);
-
-// асинхронный запуск
-var callback = function(str) {			// функция, которая будет запущена после асинхронного выполнения преобразования массива в строку
-	console.log('Async.');
-	console.log(str);
-}
-n2s.n2s(numbers, callback);
