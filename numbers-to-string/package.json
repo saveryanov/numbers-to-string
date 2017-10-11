@@ -1,0 +1,15 @@
+{
+  "name": "numbers-to-string",
+  "version": "1.0.0",
+  "description": "Transform array of numbers to string",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "numbers-to-string"
+  },
+  "author": "Sergey Averyanov",
+  "license": "ISC"
+}
