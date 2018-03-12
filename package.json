@@ -1,6 +1,6 @@
 {
   "name": "numbers-to-string",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Transform and format array of numbers to string",
   "main": "index.js",
   "scripts": {
