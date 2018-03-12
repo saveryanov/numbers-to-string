@@ -35,6 +35,6 @@ var callback_binary = function(str) {
 n2s.n2s_bin(numbers, callback_binary);
 
 // синхронный запуск
-var str = n2s.n2s_bin(numbers);				
+str = n2s.n2s_bin(numbers);				
 console.log('Sync. Binary search.');
 console.log(str);

@@ -1,10 +1,10 @@
 {
   "name": "numbers-to-string",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Transform and format array of numbers to string",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -12,8 +12,13 @@
   },
   "author": "Sergey Averyanov",
   "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
   "bugs": {
     "url": "https://github.com/saveryanov/numbers-to-string/issues"
   },
   "homepage": "https://github.com/saveryanov/numbers-to-string#readme"
 }
+
