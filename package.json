@@ -1,8 +1,8 @@
 {
   "name": "numbers-to-string",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Transform and format array of numbers to string",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
