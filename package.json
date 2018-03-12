@@ -1,0 +1,19 @@
+{
+  "name": "numbers-to-string",
+  "version": "1.0.1",
+  "description": "Transform and format array of numbers to string",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saveryanov/numbers-to-string.git"
+  },
+  "author": "Sergey Averyanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saveryanov/numbers-to-string/issues"
+  },
+  "homepage": "https://github.com/saveryanov/numbers-to-string#readme"
+}
